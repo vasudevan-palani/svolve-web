@@ -1,0 +1,32 @@
+<header>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img style="height:50px" src="assets/images/opensearch.png"/></a>
+
+        <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"><li></li></ul>
+          <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/gettingstarted" routerLinkActive="active">Getting Started</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/features" routerLinkActive="active">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " routerLink="/pricing" routerLinkActive="active">Pricing</a>
+                </li>
+                <li class="nav-item" *ngIf="!loginstatus">
+                  <a class="nav-link " routerLink="/signup" routerLinkActive="active">Sign Up</a>
+                </li>
+                <li class="nav-item" *ngIf="loginstatus">
+                  <a class="nav-link " (click)="logout()">Logout</a>
+                </li>
+                <li class="nav-item" *ngIf="!loginstatus">
+                  <a class="nav-link " routerLink="/login" routerLinkActive="active"> Login</a>
+                </li>
+              </ul>
+        </div>
+      </nav>
+</header>
